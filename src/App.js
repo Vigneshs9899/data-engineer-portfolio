@@ -286,9 +286,9 @@ function App() {
 
       <footer>
 
-        <p>© 2026 S Vignesh</p>
+        <p>© 2026 Vignesh</p>
 
-        <p>Hosted on Azure Static Web Apps</p>
+      
 
       </footer>
 
