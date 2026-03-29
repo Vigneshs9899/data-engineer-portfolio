@@ -223,3 +223,65 @@ transform:rotate(90deg);
 }
 
 }
+
+/* PROJECT GRID */
+
+.projectsGrid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+/* PROJECT CARD */
+
+.projectCard{
+background:#1e293b;
+padding:22px;
+border-radius:12px;
+transition:.2s;
+}
+
+.projectCard:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 25px rgba(0,0,0,.4);
+}
+
+/* HEADER */
+
+.projectHeader{
+margin-bottom:10px;
+}
+
+/* TECH STACK TAGS */
+
+.techStack{
+margin-top:15px;
+margin-bottom:15px;
+}
+
+.techStack span{
+display:inline-block;
+background:#334155;
+padding:5px 10px;
+margin:4px;
+border-radius:6px;
+font-size:12px;
+}
+
+/* BUTTONS */
+
+.projectButtons a{
+display:inline-block;
+padding:8px 14px;
+background:#38bdf8;
+color:black;
+text-decoration:none;
+border-radius:6px;
+font-size:14px;
+font-weight:600;
+transition:.2s;
+}
+
+.projectButtons a:hover{
+transform:translateY(-2px);
+}

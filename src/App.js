@@ -94,36 +94,93 @@ function App() {
         </div>
       </section>
 
-      {/* PROJECTS */}
       <section id="projects">
         <h2>Projects</h2>
 
-        <div className="grid">
-          <div className="card">
-            <h3>Azure Sales Data Pipeline</h3>
+        <div className="projectsGrid">
+          {/* Project 1 */}
+          <div className="projectCard">
+            <div className="projectHeader">
+              <h3>Azure Sales Data Pipeline</h3>
+            </div>
 
             <p>
-              End-to-end ETL pipeline using Azure Data Factory, Azure Data Lake
-              Storage Gen2 and Databricks.
+              End-to-end ETL pipeline built using Azure Data Factory, Azure Data
+              Lake Gen2 and Databricks to process sales data for analytics
+              dashboards.
             </p>
+
+            <div className="techStack">
+              <span>Azure</span>
+              <span>Python</span>
+              <span>Databricks</span>
+              <span>Power BI</span>
+            </div>
+
+            <div className="projectButtons">
+              <a
+                href="https://github.com/Vigneshs9899"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View Code
+              </a>
+            </div>
           </div>
 
-          <div className="card">
-            <h3>YouTube Data Warehouse</h3>
+          {/* Project 2 */}
+          <div className="projectCard">
+            <div className="projectHeader">
+              <h3>YouTube Data Warehouse</h3>
+            </div>
 
             <p>
-              Built ETL pipeline using YouTube API, Python processing and SQL
-              storage.
+              Built a data ingestion pipeline using the YouTube API, Python ETL
+              and SQL warehouse with a Streamlit analytics dashboard.
             </p>
+
+            <div className="techStack">
+              <span>Python</span>
+              <span>SQL</span>
+              <span>Streamlit</span>
+            </div>
+
+            <div className="projectButtons">
+              <a
+                href="https://github.com/Vigneshs9899"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View Code
+              </a>
+            </div>
           </div>
 
-          <div className="card">
-            <h3>Power BI Dashboard</h3>
+          {/* Project 3 */}
+          <div className="projectCard">
+            <div className="projectHeader">
+              <h3>Power BI Analytics Dashboard</h3>
+            </div>
 
             <p>
-              Interactive dashboard analyzing business metrics using SQL
-              transformations.
+              Created an interactive dashboard analyzing business metrics using
+              SQL transformations and Power BI visualizations.
             </p>
+
+            <div className="techStack">
+              <span>SQL</span>
+              <span>Power BI</span>
+            </div>
+
+            <div className="projectButtons">
+              <a
+                href="https://github.com/Vigneshs9899"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View Code
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -200,7 +257,7 @@ function App() {
       </section>
 
       <footer>
-        <p>© 2026 S Vignesh</p>
+        <p>© 2026 Vignesh</p>
       </footer>
     </div>
   );
