@@ -56,7 +56,6 @@ section{
   background:#1e293b;
   padding:20px;
   border-radius:8px;
-  transition:transform .2s;
 }
 
 .projectLink{
@@ -65,9 +64,31 @@ section{
   color:#38bdf8;
 }
 
-.pipeline{
-  font-weight:bold;
-  margin:15px 0;
+.pipelineContainer{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.pipelineStep{
+  background:#1e293b;
+  padding:20px;
+  border-radius:8px;
+  margin:10px;
+  min-width:140px;
+  text-align:center;
+  transition:transform .3s;
+}
+
+.pipelineStep:hover{
+  transform:scale(1.1);
+}
+
+.arrow{
+  font-size:28px;
+  margin:10px;
 }
 
 footer{

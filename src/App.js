@@ -4,12 +4,11 @@ function App() {
   return (
     <div className="container">
 
-      {/* Navbar */}
+      {/* NAVBAR */}
       <motion.nav
         className="navbar"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
       >
         <h2>S Vignesh</h2>
 
@@ -17,15 +16,16 @@ function App() {
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
-          <a href="#architecture">Architecture</a>
+          <a href="#pipeline">Pipeline</a>
           <a href="#contact">Contact</a>
         </div>
       </motion.nav>
 
-      {/* Hero */}
+
+      {/* HERO */}
       <motion.header
         className="hero"
-        initial={{ opacity: 0, y: -40 }}
+        initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
@@ -43,28 +43,26 @@ function App() {
         </div>
       </motion.header>
 
-      {/* About */}
+
+      {/* ABOUT */}
       <motion.section
         id="about"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
       >
         <h2>About Me</h2>
 
         <p>
-          Aspiring Azure Data Engineer experienced in building ETL pipelines
-          using Azure services and Python. Skilled in transforming raw data
-          into analytics-ready datasets using PySpark and SQL.
+          Aspiring Azure Data Engineer with hands-on experience building
+          ETL pipelines using Azure services and Python.
+          Skilled in transforming raw data into analytics-ready datasets
+          using PySpark and SQL.
         </p>
       </motion.section>
 
-      {/* Skills */}
-      <motion.section
-        id="skills"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-      >
+
+      {/* SKILLS */}
+      <section id="skills">
         <h2>Skills</h2>
 
         <div className="grid">
@@ -75,8 +73,8 @@ function App() {
           </motion.div>
 
           <motion.div className="card" whileHover={{ scale: 1.05 }}>
-            <h3>Cloud</h3>
-            <p>Azure Data Factory • Azure Databricks • Azure Data Lake</p>
+            <h3>Azure</h3>
+            <p>Azure Data Factory • Azure Databricks • Data Lake</p>
           </motion.div>
 
           <motion.div className="card" whileHover={{ scale: 1.05 }}>
@@ -90,14 +88,11 @@ function App() {
           </motion.div>
 
         </div>
-      </motion.section>
+      </section>
 
-      {/* Projects */}
-      <motion.section
-        id="projects"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-      >
+
+      {/* PROJECTS */}
+      <section id="projects">
         <h2>Projects</h2>
 
         <div className="grid">
@@ -106,101 +101,98 @@ function App() {
             <h3>Azure Sales Data Pipeline</h3>
 
             <p>
-              End-to-end ETL pipeline using Azure Data Factory,
-              Azure Data Lake and Databricks with Power BI dashboards.
+              Built an end-to-end ETL pipeline using Azure Data Factory,
+              Azure Data Lake Storage Gen2 and Azure Databricks with
+              Power BI dashboards.
             </p>
 
-            <a className="projectLink" href="https://github.com/Vigneshs9899">
+            <a
+              className="projectLink"
+              href="https://github.com/Vigneshs9899"
+            >
               View Project →
             </a>
           </motion.div>
+
 
           <motion.div className="card" whileHover={{ scale: 1.05 }}>
             <h3>YouTube Data Warehouse</h3>
 
             <p>
-              Built ETL pipeline using YouTube API, Python and SQL
-              with analytics dashboard using Streamlit.
+              Built data ingestion pipeline using YouTube API,
+              Python ETL and SQL warehouse with Streamlit analytics.
             </p>
 
-            <a className="projectLink" href="https://github.com/Vigneshs9899">
+            <a
+              className="projectLink"
+              href="https://github.com/Vigneshs9899"
+            >
               View Project →
             </a>
           </motion.div>
+
 
           <motion.div className="card" whileHover={{ scale: 1.05 }}>
             <h3>Power BI Analytics Dashboard</h3>
 
             <p>
-              Interactive dashboard analyzing business metrics
-              using SQL transformations and Power BI visualizations.
+              Interactive business analytics dashboard built
+              using SQL transformations and Power BI.
             </p>
           </motion.div>
 
         </div>
-      </motion.section>
+      </section>
 
-      {/* Architecture */}
-      <motion.section
-        id="architecture"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-      >
-        <h2>Data Pipeline Architecture</h2>
 
-        <div className="card">
+      {/* DATA PIPELINE */}
+      <section id="pipeline">
 
-          <h3>Azure Data Engineering Pipeline</h3>
+        <h2>Azure Data Pipeline Architecture</h2>
 
-          <p className="pipeline">
-            Data Source → Azure Data Factory → Data Lake Gen2 →
-            Azure Databricks → Power BI
-          </p>
+        <div className="pipelineContainer">
 
-          <p>
-            Implemented Medallion Architecture with Bronze,
-            Silver and Gold layers using PySpark transformations.
-          </p>
+          <div className="pipelineStep">
+            <h3>Data Source</h3>
+            <p>API / CSV</p>
+          </div>
+
+          <div className="arrow">→</div>
+
+          <div className="pipelineStep">
+            <h3>Ingestion</h3>
+            <p>Azure Data Factory</p>
+          </div>
+
+          <div className="arrow">→</div>
+
+          <div className="pipelineStep">
+            <h3>Storage</h3>
+            <p>Data Lake Gen2</p>
+          </div>
+
+          <div className="arrow">→</div>
+
+          <div className="pipelineStep">
+            <h3>Processing</h3>
+            <p>Databricks</p>
+          </div>
+
+          <div className="arrow">→</div>
+
+          <div className="pipelineStep">
+            <h3>Analytics</h3>
+            <p>Power BI</p>
+          </div>
 
         </div>
-      </motion.section>
 
-      {/* Experience */}
-      <motion.section
-        id="experience"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-      >
-        <h2>Experience</h2>
+      </section>
 
-        <div className="card">
-          <h3>SQL Developer</h3>
-          <p>Balbhas Business Sysnomics LLC — Chennai</p>
 
-          <p>
-            Developed SQL queries for reporting and optimized
-            database performance for application workflows.
-          </p>
-        </div>
+      {/* CONTACT */}
+      <section id="contact">
 
-        <div className="card">
-          <h3>Web & Database Developer</h3>
-          <p>Cloud Hawk — Tuticorin</p>
-
-          <p>
-            Managed backend data processing and API-based
-            data operations.
-          </p>
-        </div>
-
-      </motion.section>
-
-      {/* Contact */}
-      <motion.section
-        id="contact"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-      >
         <h2>Contact</h2>
 
         <p>Email: vigneshsaravanan.dev@outlook.com</p>
@@ -209,8 +201,11 @@ function App() {
           <a href="https://github.com/Vigneshs9899">GitHub</a>
           <a href="https://linkedin.com/in/vigneshs9899">LinkedIn</a>
         </div>
-      </motion.section>
 
+      </section>
+
+
+      {/* FOOTER */}
       <footer>
         <p>© 2026 S Vignesh</p>
         <p>Hosted on Azure Static Web Apps</p>
