@@ -1,11 +1,8 @@
-/* GLOBAL */
-
 body{
 margin:0;
-font-family:Inter, Arial, sans-serif;
+font-family:Inter,Arial;
 background:#0f172a;
 color:white;
-line-height:1.6;
 }
 
 .container{
@@ -20,95 +17,50 @@ padding:20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:30px;
+margin-bottom:40px;
 }
 
-.navbar h2{
-font-size:22px;
-}
-
-.navbar a{
+.navLinks a{
 margin-left:20px;
-color:#38bdf8;
 text-decoration:none;
-font-weight:500;
-}
-
-.navbar a:hover{
-opacity:.8;
+color:#38bdf8;
 }
 
 /* HERO */
-
-.hero{
-padding:60px 0;
-}
 
 .heroContent{
 display:flex;
 align-items:center;
 justify-content:center;
-gap:50px;
+gap:60px;
 flex-wrap:wrap;
 }
 
-/* PROFILE IMAGE */
-
-.heroImageContainer{
+.heroImage img{
 width:180px;
 height:180px;
 border-radius:50%;
-overflow:hidden;
+object-fit:cover;
 border:4px solid #38bdf8;
 }
 
-.profileImage{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-/* HERO TEXT */
-
-.heroText{
-max-width:500px;
-}
-
 .heroText h1{
-font-size:34px;
-margin-bottom:5px;
+font-size:36px;
+margin-bottom:10px;
 }
 
-.heroText h2{
-color:#38bdf8;
-font-weight:500;
-margin-bottom:15px;
+.heroButtons{
+margin-top:20px;
 }
 
-.heroText p{
-margin-bottom:20px;
-}
-
-/* BUTTONS */
-
-.buttons{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-}
-
-.buttons a{
-padding:10px 18px;
+.heroButtons a{
+margin-right:10px;
+padding:10px 16px;
 background:#38bdf8;
 color:black;
-text-decoration:none;
 border-radius:6px;
+text-decoration:none;
 font-weight:600;
-transition:.2s;
-}
-
-.buttons a:hover{
-transform:translateY(-2px);
 }
 
 /* SECTIONS */
@@ -117,114 +69,19 @@ section{
 margin-top:70px;
 }
 
-section h2{
-margin-bottom:20px;
-}
-
-/* GRID */
-
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
 }
 
-/* CARD */
-
 .card{
 background:#1e293b;
 padding:20px;
 border-radius:10px;
-transition:.2s;
 }
 
-.card:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 25px rgba(0,0,0,.4);
-}
-
-/* PROJECT LINK */
-
-.projectLink{
-display:block;
-margin-top:10px;
-color:#38bdf8;
-}
-
-/* PIPELINE */
-
-.pipelineContainer{
-display:flex;
-align-items:center;
-justify-content:center;
-flex-wrap:wrap;
-margin-top:30px;
-}
-
-.pipelineStep{
-background:#1e293b;
-padding:15px 20px;
-border-radius:8px;
-margin:10px;
-text-align:center;
-min-width:120px;
-transition:.2s;
-}
-
-.pipelineStep:hover{
-transform:scale(1.05);
-}
-
-.arrow{
-font-size:28px;
-margin:10px;
-color:#38bdf8;
-}
-
-/* FOOTER */
-
-footer{
-text-align:center;
-margin-top:70px;
-opacity:.8;
-font-size:14px;
-}
-
-/* RESPONSIVE DESIGN */
-
-@media (max-width:768px){
-
-.navbar{
-flex-direction:column;
-gap:10px;
-}
-
-.navbar div{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.heroContent{
-flex-direction:column;
-text-align:center;
-}
-
-.heroText{
-max-width:100%;
-}
-
-.pipelineContainer{
-flex-direction:column;
-}
-
-.arrow{
-transform:rotate(90deg);
-}
-
-}
-
-/* PROJECT GRID */
+/* PROJECTS */
 
 .projectsGrid{
 display:grid;
@@ -232,56 +89,77 @@ grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
 }
 
-/* PROJECT CARD */
-
 .projectCard{
 background:#1e293b;
-padding:22px;
-border-radius:12px;
-transition:.2s;
+padding:20px;
+border-radius:10px;
 }
 
-.projectCard:hover{
-transform:translateY(-6px);
-box-shadow:0 12px 25px rgba(0,0,0,.4);
-}
-
-/* HEADER */
-
-.projectHeader{
-margin-bottom:10px;
-}
-
-/* TECH STACK TAGS */
-
-.techStack{
-margin-top:15px;
+.projectImage{
+width:100%;
+border-radius:10px;
 margin-bottom:15px;
 }
 
 .techStack span{
-display:inline-block;
 background:#334155;
-padding:5px 10px;
-margin:4px;
+padding:4px 8px;
 border-radius:6px;
+margin-right:6px;
 font-size:12px;
 }
 
-/* BUTTONS */
-
-.projectButtons a{
+.githubButton{
 display:inline-block;
+margin-top:12px;
 padding:8px 14px;
 background:#38bdf8;
 color:black;
-text-decoration:none;
 border-radius:6px;
-font-size:14px;
-font-weight:600;
-transition:.2s;
+text-decoration:none;
 }
 
-.projectButtons a:hover{
-transform:translateY(-2px);
+/* PIPELINE */
+
+.pipeline{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+gap:10px;
+margin-top:20px;
+}
+
+.pipeline div{
+background:#1e293b;
+padding:10px 14px;
+border-radius:8px;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+margin-top:80px;
+opacity:.8;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.heroContent{
+flex-direction:column;
+text-align:center;
+}
+
+.navbar{
+flex-direction:column;
+gap:10px;
+}
+
+.pipeline{
+flex-direction:column;
+}
+
 }
