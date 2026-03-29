@@ -1,159 +1,163 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function App() {
+
+  const [repos, setRepos] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://api.github.com/users/Vigneshs9899/repos?sort=updated")
+      .then((res) => setRepos(res.data.slice(0, 4)));
+  }, []);
+
   return (
     <div className="container">
 
       {/* NAVBAR */}
-      <motion.nav
-        className="navbar"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-      >
+      <nav className="navbar">
         <h2>S Vignesh</h2>
 
         <div>
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
-          <a href="#pipeline">Pipeline</a>
+          <a href="#github">GitHub</a>
           <a href="#contact">Contact</a>
         </div>
-      </motion.nav>
+      </nav>
 
 
       {/* HERO */}
-      <motion.header
-        className="hero"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <h1>Azure Data Engineer</h1>
+      <section className="hero">
 
-        <p>
-          Building scalable data pipelines and cloud data platforms using
-          Python, SQL and Azure technologies.
-        </p>
+        <motion.img
+          src="/profile.png"
+          className="profileImage"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+        />
 
-        <div className="buttons">
-          <a href="https://github.com/Vigneshs9899">GitHub</a>
-          <a href="https://linkedin.com/in/vigneshs9899">LinkedIn</a>
-          <a href="/resume.pdf">Download Resume</a>
-        </div>
-      </motion.header>
+        <motion.div
+          initial={{ opacity: 0, y: -40 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <h1>Azure Data Engineer</h1>
+
+          <p>
+            Building scalable data pipelines and cloud data platforms
+            using Python, SQL and Azure technologies.
+          </p>
+
+          <div className="buttons">
+            <a href="https://github.com/Vigneshs9899">GitHub</a>
+            <a href="https://linkedin.com/in/vigneshs9899">LinkedIn</a>
+            <a href="/resume.pdf">Download Resume</a>
+          </div>
+        </motion.div>
+
+      </section>
 
 
       {/* ABOUT */}
-      <motion.section
-        id="about"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-      >
+      <section id="about">
+
         <h2>About Me</h2>
 
         <p>
-          Aspiring Azure Data Engineer with hands-on experience building
-          ETL pipelines using Azure services and Python.
-          Skilled in transforming raw data into analytics-ready datasets
-          using PySpark and SQL.
+          Aspiring Azure Data Engineer experienced in building ETL pipelines
+          using Azure services and Python. Skilled in transforming raw data
+          into analytics-ready datasets using PySpark and SQL.
         </p>
-      </motion.section>
+
+      </section>
 
 
       {/* SKILLS */}
       <section id="skills">
+
         <h2>Skills</h2>
 
         <div className="grid">
 
-          <motion.div className="card" whileHover={{ scale: 1.05 }}>
+          <div className="card">
             <h3>Languages</h3>
             <p>Python • SQL • PySpark</p>
-          </motion.div>
+          </div>
 
-          <motion.div className="card" whileHover={{ scale: 1.05 }}>
+          <div className="card">
             <h3>Azure</h3>
-            <p>Azure Data Factory • Azure Databricks • Data Lake</p>
-          </motion.div>
+            <p>Data Factory • Databricks • Data Lake</p>
+          </div>
 
-          <motion.div className="card" whileHover={{ scale: 1.05 }}>
+          <div className="card">
             <h3>Data Tools</h3>
             <p>Power BI • Streamlit • Pandas</p>
-          </motion.div>
+          </div>
 
-          <motion.div className="card" whileHover={{ scale: 1.05 }}>
+          <div className="card">
             <h3>Databases</h3>
             <p>MySQL • MS SQL Server</p>
-          </motion.div>
+          </div>
 
         </div>
+
       </section>
 
 
       {/* PROJECTS */}
       <section id="projects">
+
         <h2>Projects</h2>
 
         <div className="grid">
 
-          <motion.div className="card" whileHover={{ scale: 1.05 }}>
+          <div className="card">
             <h3>Azure Sales Data Pipeline</h3>
 
             <p>
-              Built an end-to-end ETL pipeline using Azure Data Factory,
-              Azure Data Lake Storage Gen2 and Azure Databricks with
-              Power BI dashboards.
+              End-to-end ETL pipeline using Azure Data Factory,
+              Azure Data Lake Storage Gen2 and Databricks.
             </p>
 
-            <a
-              className="projectLink"
-              href="https://github.com/Vigneshs9899"
-            >
-              View Project →
-            </a>
-          </motion.div>
+          </div>
 
-
-          <motion.div className="card" whileHover={{ scale: 1.05 }}>
+          <div className="card">
             <h3>YouTube Data Warehouse</h3>
 
             <p>
-              Built data ingestion pipeline using YouTube API,
-              Python ETL and SQL warehouse with Streamlit analytics.
+              Built ETL pipeline using YouTube API,
+              Python processing and SQL storage.
             </p>
 
-            <a
-              className="projectLink"
-              href="https://github.com/Vigneshs9899"
-            >
-              View Project →
-            </a>
-          </motion.div>
+          </div>
 
-
-          <motion.div className="card" whileHover={{ scale: 1.05 }}>
-            <h3>Power BI Analytics Dashboard</h3>
+          <div className="card">
+            <h3>Power BI Dashboard</h3>
 
             <p>
-              Interactive business analytics dashboard built
-              using SQL transformations and Power BI.
+              Interactive dashboard analyzing business metrics
+              using SQL transformations.
             </p>
-          </motion.div>
+
+          </div>
 
         </div>
+
       </section>
 
 
-      {/* DATA PIPELINE */}
-      <section id="pipeline">
+      {/* PIPELINE VISUALIZATION */}
+      <section>
 
         <h2>Azure Data Pipeline Architecture</h2>
 
         <div className="pipelineContainer">
 
           <div className="pipelineStep">
-            <h3>Data Source</h3>
+            <h3>Source</h3>
             <p>API / CSV</p>
           </div>
 
@@ -161,14 +165,14 @@ function App() {
 
           <div className="pipelineStep">
             <h3>Ingestion</h3>
-            <p>Azure Data Factory</p>
+            <p>ADF</p>
           </div>
 
           <div className="arrow">→</div>
 
           <div className="pipelineStep">
             <h3>Storage</h3>
-            <p>Data Lake Gen2</p>
+            <p>Data Lake</p>
           </div>
 
           <div className="arrow">→</div>
@@ -190,6 +194,32 @@ function App() {
       </section>
 
 
+      {/* GITHUB AUTO PROJECTS */}
+      <section id="github">
+
+        <h2>Latest GitHub Projects</h2>
+
+        <div className="grid">
+
+          {repos.map((repo) => (
+            <div key={repo.id} className="card">
+
+              <h3>{repo.name}</h3>
+
+              <p>{repo.description}</p>
+
+              <a href={repo.html_url} className="projectLink">
+                View Repository →
+              </a>
+
+            </div>
+          ))}
+
+        </div>
+
+      </section>
+
+
       {/* CONTACT */}
       <section id="contact">
 
@@ -205,10 +235,12 @@ function App() {
       </section>
 
 
-      {/* FOOTER */}
       <footer>
+
         <p>© 2026 S Vignesh</p>
+
         <p>Hosted on Azure Static Web Apps</p>
+
       </footer>
 
     </div>
