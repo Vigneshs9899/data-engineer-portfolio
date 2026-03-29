@@ -181,7 +181,7 @@ function App() {
 
             <a
               className="githubButton"
-              href="https://github.com/Vigneshs9899"
+              href="https://github.com/Vigneshs9899/azure-sales-data-engineering-pipeline.git"
               target="_blank"
               rel="noreferrer"
             >
@@ -218,7 +218,7 @@ function App() {
 
             <a
               className="githubButton"
-              href="https://github.com/Vigneshs9899"
+              href="https://github.com/Vigneshs9899/youtube-data-warehouse-streamlit.git"
               target="_blank"
               rel="noreferrer"
             >
